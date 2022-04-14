@@ -1,0 +1,351 @@
+{
+	"sll": {
+		"prefix": "sll",
+		"body": "slli ${1:rd}, ${2:rs1}, ${3:rs2}; # $1 = $2 << $3\n",
+		"description": "shift left logical",
+		"scope": "source.riscv"
+	},
+	"slli": {
+		"prefix": "slli",
+		"body": "slli ${1:rd}, ${2:rs1}, ${3:imm}; # $1 = $2 << $3\n",
+		"description": "shift left logical immediate",
+		"scope": "source.riscv"
+	},
+	"srl": {
+		"prefix": "srl",
+		"body": "srli ${1:rd}, ${2:rs1}, ${3:rs2}; # $1 = $2 >> $3\n",
+		"description": "shift right logical",
+		"scope": "source.riscv"
+	},
+	"srli": {
+		"prefix": "srli",
+		"body": "srli ${1:rd}, ${2:rs1}, ${3:imm}; # $1 = $2 >> $3\n",
+		"description": "shift right logical immediate",
+		"scope": "source.riscv"
+	},
+	"sra": {
+		"prefix": "sra",
+		"body": "srai ${1:rd}, ${2:rs1}, ${3:rs2}; # $1 = $2 >> $3\n",
+		"description": "shift right arithmetic",
+		"scope": "source.riscv"
+	},
+	"srai": {
+		"prefix": "srai",
+		"body": "srai ${1:rd}, ${2:rs1}, ${3:imm}; # $1 = $2 >> $3\n",
+		"description": "shift right arithmetic immediate",
+		"scope": "source.riscv"
+	},
+
+	"addi": {
+		"prefix": "addi",
+		"body": "addi ${1:rd}, ${2:rs1}, ${3:imm}; # $1 = $2 + $3\n",
+		"description": "add immediate",
+		"scope": "source.riscv"
+	},
+	"add": {
+		"prefix": "add",
+		"body": "add ${1:rd}, ${2:rs1}, ${3:rs2}; # $1 = $2 + $3\n",
+		"description": "add",
+		"scope": "source.riscv"
+	},
+	"sub": {
+		"prefix": "sub",
+		"body": "sub ${1:rd}, ${2:rs1}, ${3:rs2}; # $1 = $2 - $3\n",
+		"description": "substract",
+		"scope": "source.riscv"
+	},
+	"lui": {
+		"prefix": "lui",
+		"body": "lui ${1:td}, ${2:imm}; # $1[31:12] = $2\n",
+		"description": "load upper immediate",
+		"scope": "source.riscv"
+	},
+	"auipc": {
+		"prefix": "auipc",
+		"body": "auipc ${1:td}, ${2:imm}; # $1 = $1 + $2\n",
+		"description": "add upper immediate to pc",
+		"scope": "source.riscv"
+	},
+	"nop": {
+		"prefix": "nop",
+		"body": "nop; \n",
+		"description": "no operation",
+		"scope": "source.riscv"
+	},
+
+	"xor": {
+		"prefix": "xor",
+		"body": "xor ${1:rd}, ${2:rs1}, ${3:rs2}; # $1 = $2 xor $3\n",
+		"description": "xor",
+		"scope": "source.riscv"
+	},
+	"xori": {
+		"prefix": "xori",
+		"body": "xori ${1:rd}, ${2:rs1}, ${3:imm}; # $1 = $2 xor $3\n",
+		"description": "xor immediate",
+		"scope": "source.riscv"
+	},	
+	"or": {
+		"prefix": "or",
+		"body": "or ${1:rd}, ${2:rs1}, ${3:rs2}; # $1 = $2 or $3\n",
+		"description": "or",
+		"scope": "source.riscv"
+	},
+	"ori": {
+		"prefix": "ori",
+		"body": "ori ${1:rd}, ${2:rs1}, ${3:imm}; # $1 = $2 or $3\n",
+		"description": "or immediate",
+		"scope": "source.riscv"
+	},
+	"and": {
+		"prefix": "and",
+		"body": "and ${1:rd}, ${2:rs1}, ${3:rs2}; # $1 = $2 and $3\n",
+		"description": "and",
+		"scope": "source.riscv"
+	},
+	"andi": {
+		"prefix": "andi",
+		"body": "andi ${1:rd}, ${2:rs1}, ${3:imm}; # $1 = $2 and $3\n",
+		"description": "and immediate",
+		"scope": "source.riscv"
+	},
+	"not": {
+		"prefix": "not",
+		"body": "not ${1:rd}, ${2:rs}; # xori $1, $2, -1\n",
+		"description": "one's complement",
+		"scope": "source.riscv"		
+	},
+
+	
+
+
+	"slt": {
+		"prefix": "slt",
+		"body": "slt ${1:rd}, ${2:rs1}, ${3:rs2}; # $1 = ($2 < $3)\n",
+		"description": "set less than",
+		"scope": "source.riscv"
+	},
+	"slti": {
+		"prefix": "slti",
+		"body": "slti ${1:rd}, ${2:rs1}, ${3:imm}; # $1 = ($2 < $3)\n",
+		"description": "set less than immediate",
+		"scope": "source.riscv"
+	},
+	"sltu": {
+		"prefix": "sltu",
+		"body": "sltu ${1:rd}, ${2:rs1}, ${3:rs2}; # $1 = ($2 < $3)\n",
+		"description": "set less than unsigned",
+		"scope": "source.riscv"
+	},
+	"sltiu": {
+		"prefix": "sltiu",
+		"body": "sltiu ${1:rd}, ${2:rs1}, ${3:imm}; # $1 = ($2 < $3)\n",
+		"description": "set less than immediate unsigned",
+		"scope": "source.riscv"
+	},
+	"seqz": {
+		"prefix": "seqz",
+		"body": "seqz ${1:rd}, ${2:rs}; # $1 = ($2 = 0)\n",
+		"description": "set equal to zero",
+		"scope": "source.risc"
+	},
+	"snez": {
+		"prefix": "snez",
+		"body": "snez ${1:rd}, ${2:rs}; # $1 = ($2 != 0)\n",
+		"description": "set not equal to zero",
+		"scope": "source.risc"
+	},
+	"sltz": {
+		"prefix": "sltz",
+		"body": "sltz ${1:rd}, ${2:rs}; # $1 = ($2 < 0)\n",
+		"description": "set less than zero",
+		"scope": "source.risc"
+	},
+	"sgtz": {
+		"prefix": "sgtz",
+		"body": "sgtz ${1:rd}, ${2:rs}; # $1 = ($2 > 0)\n",
+		"description": "set greater than zero",
+		"scope": "source.risc"
+	},
+
+
+
+	"beq": {
+		"prefix": "beq",
+		"body": "beq ${1:rs1}, ${2:rs2}, ${3:target}; # if $1 == $2 then $3\n",
+		"description": "branch if equal",
+		"scope": "source.riscv"
+	},
+	"beqz": {
+		"prefix": "beqz",
+		"body": "beqz ${1:rs}, ${2:target}, # if $1 == 0 then $2\n",
+		"description": "branch if = 0",
+		"scope": "source.riscv"
+	},
+	"bge": {
+		"prefix": "bge",
+		"body": "bge ${1:rs1}, ${2:rs2}, ${3:target} # if $1 >= $2 then $3\n",
+		"description": "branch if greater than or equal",
+		"scope": "source.riscv"
+	},
+	"bgt": {
+		"prefix": "bgt",
+		"body": "bgt ${1:rs1}, ${2:rs2}, ${3:target} # if $1 > $2 then $3\n",
+		"description": "branch if greater than",
+		"scope": "source.riscv"
+	},
+	"ble": {
+		"prefix": "ble",
+		"body": "ble ${1:rs1}, ${2:rs2}, ${3:target} # if $1 <= $2 then $3\n",
+		"description": "branch if less than or equal",
+		"scope": "source.riscv"
+	},
+	"blt": {
+		"prefix": "blt",
+		"body": "blt ${1:rs1}, ${2:rs2}, ${3:target} # if $1 < $2 then $3\n",
+		"description": "branch if less than",
+		"scope": "source.riscv"
+	},
+	"bne": {
+		"prefix": "bne",
+		"body": "bne ${1:rs1}, ${2:rs2}, ${3:target} # if $1 != $2 then $3\n",
+		"description": "branch if not equal",
+		"scope": "source.riscv"
+	},
+
+	"bltu": {
+		"prefix": "bltu",
+		"body": "bltu ${1:rs1}, ${2:rs2}, ${3:target} # if $1 < $2 then $3\n",
+		"description": "branch if less than (unsigned)",
+		"scope": "source.riscv"
+	},
+	"bgtu": {
+		"prefix": "bgtu",
+		"body": "bgtu ${1:rs1}, ${2:rs2}, ${3:target} # if $1 > $2 then $3\n",
+		"description": "branch if greater than (unsigned) ",
+		"scope": "source.riscv"
+	},
+	"bgeu": {
+		"prefix": "bgeu",
+		"body": "bgeu ${1:rs1}, ${2:rs2}, ${3:target} # if $1 >= $2 then $3\n",
+		"description": "branch if greater than or equal (unsigned) ",
+		"scope": "source.riscv"
+	},
+	"bleu": {
+		"prefix": "bleu",
+		"body": "bleu ${1:rs1}, ${2:rs2}, ${3:target} # if $1 <= $2 then $3\n",
+		"description": "branch if less than or equal (unsigned) ",
+		"scope": "source.riscv"
+	},
+
+	"jal": {
+		"prefix": "jal",
+		"body": "jal ${1:rd} ${2:target}  # jump to $2 and save position(PC+4) to $1\n",
+		"description": "jump and link",
+		"scope": "source.riscv"
+	},
+	"jr": {
+		"prefix": "jr",
+		"body": "jr ${1:ra}   # jump to $1\n",
+		"description": "jump register",
+		"scope": "source.riscv"
+	},
+	"jalr": {
+		"prefix": "jalr",
+		"body": "jalr ${1:rd} ${2:rs1} ${3:offset}  # jump to $2 + $3, and save position(PC+4) to $1\n",
+		"description": "jump and link register",
+		"scope": "source.riscv"
+	},
+	"j": {
+		"prefix": "j",
+		"body": "j ${1:target}  # jump to $1\n",
+		"description": "jump",
+		"scope": "source.riscv"
+	},
+
+	"la": {
+		"prefix": "la",
+		"body": "la ${1:rd}, ${2:imm} # rd = imm[31:0]\n",
+		"description": "load address",
+		"scope": "source.riscv"
+	},
+	"lb": {
+		"prefix": "lb",
+		"body": "lb ${1:rd}, ${2:${3:imm}(${4:rs1})} # \n",
+		"description": "load byte",
+		"scope": "source.riscv"
+	},
+	"lbu": {
+		"prefix": "lbu",
+		"body": "lbu ${1:rd}, ${2:${3:imm}(${4:rs1})} # \n",
+		"description": "load byte unsigned",
+		"scope": "source.riscv"
+	},
+	"lh": {
+		"prefix": "lh",
+		"body": "lh ${1:rd}, ${2:${3:imm}(${4:rs1})} # \n",
+		"description": "load halfword",
+		"scope": "source.riscv"
+	},
+	"lhu": {
+		"prefix": "lbu",
+		"body": "lbu ${1:rd}, ${2:${3:imm}(${4:rs1})} # \n",
+		"description": "load halfword unsigned",
+		"scope": "source.riscv"
+	},
+	"li": {
+		"prefix": "li",
+		"body": "li ${1:rd}, ${2:imm} # $1 = $2\n",
+		"description": "load immediate",
+		"scope": "source.riscv"
+	},
+	"lw": {
+		"prefix": "lw",
+		"body": "lw ${1:rd}, ${2:${3:imm}(${4:rs1})} # \n",
+		"description": "load word",
+		"scope": "source.riscv"
+	},
+
+
+	"move": {
+		"prefix": "mv",
+		"body": "mv  ${1:rs1}, ${2:rs2} # $1 = $2",
+		"description": "copy register",
+		"scope": "source.riscv"
+	},
+
+
+
+	"sb": {
+		"prefix": "sb",
+		"body": "sb ${1:rs2}, ${2:${3:imm}(${4:rs1})} # \n",
+		"description": "store byte",
+		"scope": "source.riscv"
+	},
+	"sw": {
+		"prefix": "sw",
+		"body": "sw ${1:rs2}, ${2:${3:imm}(${4:rs1})} # \n",
+		"description": "store word",
+		"scope": "source.riscv"
+	},
+	"sh": {
+		"prefix": "sh",
+		"body": "sh ${1:rs2}, ${2:${3:imm}(${4:rs1})} # \n",
+		"description": "store halfword",
+		"scope": "source.riscv"
+	},	
+	
+	
+	"string": {
+		"prefix": "string",
+		"body": "${1:string}: .asciiz \"$2\"",
+		"description": "string var",
+		"scope": "source.riscv"
+	},
+	"var": {
+		"prefix": "var",
+		"body": "${1:var}: .${2:word} $3",
+		"description": "variable",
+		"scope": "source.riscv"
+	}
+}
